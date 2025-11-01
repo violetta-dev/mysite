@@ -91,3 +91,84 @@ body.fade-in{animation:fadeIn .6s ease both} body.fade-out{animation:fadeOut .35
 .tl-item:before{content:attr(data-year); position:absolute; left:-64px; top:0; font-weight:800; font-family:Orbitron,Inter,sans-serif; font-size:.9rem; color:var(--accent); text-shadow:0 0 10px var(--muted)}
 .tl-item h4{margin:.1rem 0 .25rem}
 .tags-inline{opacity:.85; font-size:.85rem}
+
+/* === PATCH v2.7.4 — Full Background Continuity (Global Fix) === */
+/* Elimina linee ottiche e stacchi su TUTTE le pagine */
+
+body {
+  background: transparent !important;
+  overflow-x: hidden;
+}
+
+/* Layer correttivo globale dietro il video */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(122,28,172,0.10), transparent 80%),
+              radial-gradient(circle at 50% 100%, rgba(0,255,255,0.06), transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Tutti i pannelli uniformati */
+.panel {
+  background: rgba(12, 0, 23, 0.36);
+  border: 1px solid rgba(199,125,255,0.25);
+  box-shadow: inset 0 0 20px rgba(199,125,255,0.05);
+  backdrop-filter: blur(10px) saturate(1.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow morbido sopra e sotto ogni pannello */
+.panel::before,
+.panel::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 14px;
+  pointer-events: none;
+}
+.panel::before {
+  top: -1px;
+  background: linear-gradient(to bottom, rgba(12,0,23,0.35), transparent);
+}
+.panel::after {
+  bottom: -1px;
+  background: linear-gradient(to top, rgba(12,0,23,0.35), transparent);
+}
+
+/* Pagina e footer unificati */
+.page {
+  background: transparent;
+  padding-bottom: 120px;
+}
+.footer {
+  background: rgba(12,0,23,0.28);
+  border-top: 1px solid rgba(199,125,255,0.25);
+  backdrop-filter: blur(8px) saturate(1.2);
+  box-shadow: inset 0 8px 20px rgba(199,125,255,0.05);
+  position: relative;
+  z-index: 1;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12,0,23,0.4), transparent 90%);
+  z-index: -1;
+}
+
+/* Ottimizzazione mobile */
+@media (max-width: 680px) {
+  .panel {
+    background: rgba(12,0,23,0.44);
+    backdrop-filter: blur(7px) saturate(1.1);
+  }
+  .footer {
+    background: rgba(12,0,23,0.35);
+    backdrop-filter: blur(6px) saturate(1.1);
+  }
+}
