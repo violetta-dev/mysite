@@ -71,20 +71,34 @@ body.fade-in{animation:fadeIn .6s ease both} body.fade-out{animation:fadeOut .35
 @media (max-width: 900px){.console{left:12px;width:86px}.console .title{display:none}.console-status{font-size:.75rem}.console-nav .nav-link{font-size:.8rem;padding:8px 10px}.page,.footer{margin-left:110px}}
 @media (max-width: 680px){.console{position:fixed;top:10px;left:10px;width:calc(100% - 20px);height:auto}.page{margin-left:0;padding-top:120px}.footer{margin-left:0}}
 
-/* --- v4.2 Final UI Layer --- */
-html,body{height:100%;margin:0;padding:0;background:#0a0018 !important}
-*{box-sizing:border-box}
-body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#EEE}
 
+/* v2.7.0 additions */
+.console-toggle-btn{display:none}
+@media (max-width: 900px){
+  .console{left:12px;width:86px}
+  .console-toggle-btn{display:block; position:fixed; top:14px; right:16px; z-index:6; background:rgba(12,0,23,.6); border:1px solid rgba(199,125,255,.55); border-radius:12px; padding:8px 10px; font-weight:900; letter-spacing:.05em}
+  .console.collapsed{height:58px; overflow:hidden}
+  .console.collapsed .console-nav{display:none}
+}
+.back-to-top{position:fixed; right:18px; bottom:18px; z-index:6; opacity:0; pointer-events:none; transition:opacity .25s ease, transform .2s ease; transform:translateY(10px)}
+.back-to-top.show{opacity:1; pointer-events:auto; transform:translateY(0)}
+.back-to-top .btn{box-shadow:0 0 18px var(--muted)}
+/* timeline */
+.timeline{margin-top:16px}
+.timeline-list{position:relative; margin:0; padding-left:24px; list-style:none}
+.timeline-list:before{content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:linear-gradient(180deg, rgba(199,125,255,.5), rgba(0,255,255,.35))}
+.tl-item{margin:12px 0 14px; padding-left:8px; position:relative}
+.tl-item:before{content:attr(data-year); position:absolute; left:-64px; top:0; font-weight:800; font-family:Orbitron,Inter,sans-serif; font-size:.9rem; color:var(--accent); text-shadow:0 0 10px var(--muted)}
+.tl-item h4{margin:.1rem 0 .25rem}
+.tags-inline{opacity:.85; font-size:.85rem}
+
+/* v4.3 portfolio */
+html,body{height:100%;margin:0;padding:0;background:#0a0018 !important}
 .fade-in{opacity:0;animation:fadeIn .35s ease-out forwards}
 @keyframes fadeIn{to{opacity:1}}
-
-a{color:#bda7ff;text-decoration:none} a:hover{filter:brightness(1.12)}
-
 .bg-video{position:fixed;inset:0;width:100vw;height:100vh;object-fit:cover;z-index:-100;opacity:.24;filter:contrast(1.2) brightness(1.06) saturate(1.2)}
 .grid-overlay{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);background-size: 60px 60px;z-index:-90}
 .beam{position:fixed;inset:0;background:radial-gradient(1200px 300px at 70% 20%, rgba(179,127,255,.22), transparent 70%);z-index:-85;mix-blend-mode:screen}
-
 .console{position:fixed;left:18px;top:18px;width:230px;padding:18px;border-radius:18px;background:rgba(30,0,55,.55);backdrop-filter: blur(12px) saturate(1.1);border:1px solid rgba(200,150,255,.22);box-shadow:inset 0 0 18px rgba(200,150,255,.06)}
 .console-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .logo{width:28px;height:28px;object-fit:contain}
@@ -101,7 +115,6 @@ a{color:#bda7ff;text-decoration:none} a:hover{filter:brightness(1.12)}
 .nav{display:flex;flex-direction:column;gap:10px}
 .nav-link{display:block;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#eee;transition:transform .15s ease, background .15s ease}
 .nav-link:hover{background:rgba(255,255,255,.12);transform:translateX(2px)}
-
 .page{max-width:1100px;margin:0 auto;padding:120px 24px 140px}
 .center{text-align:center}
 .hero-logo{width:90px;opacity:.95}
@@ -112,16 +125,12 @@ a{color:#bda7ff;text-decoration:none} a:hover{filter:brightness(1.12)}
 .btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
 .btn.primary{background:linear-gradient(180deg,#b47bff 0%,#6a32c9 100%);border:none}
 .btn.ghost:hover{background:rgba(255,255,255,.16)}
-
 .legacy h1, .legacy h2, .legacy h3{font-family:Orbitron,Inter,sans-serif}
-.legacy p{line-height:1.7;color:#ddd}
-.legacy li{line-height:1.7;color:#ddd}
-
+.legacy p{line-height:1.7;color:#ddd}.legacy li{line-height:1.7;color:#ddd}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:18px}
 .cards .card{background:rgba(20,0,38,.7);border:1px solid rgba(200,150,255,.18);border-radius:16px;padding:14px;transition:transform .15s ease, box-shadow .15s ease}
 .cards .card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.35)}
-
+.cards .tags{margin-top:.4rem;color:#b8a7dd;font-size:.85rem;opacity:.95}
 .footer{position:relative;z-index:2;height:84px;display:flex;align-items:center;justify-content:center;text-align:center;color:#eee;background:linear-gradient(180deg, rgba(75,0,130,.80) 0%, rgba(45,0,75,.95) 100%);border-top:none;box-shadow:0 -1px 8px rgba(0,0,0,.2)}
-
 @media(max-width:980px){.console{transform:scale(.95);left:12px;top:12px}.hero-title{font-size:64px}}
 @media(max-width:700px){.console{left:10px;top:10px;width:200px}.hero-title{font-size:48px}.page{padding-top:110px}}
