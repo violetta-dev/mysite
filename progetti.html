@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIX — Progetti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style-utz.css" />
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop playsinline poster="/assets/logo_vix.png">
+    <source src="/assets/bg.mp4" type="video/mp4">
+  </video>
+  <div class="grid-overlay"></div>
+
+  <header class="hud">
+    <div class="hud-left">
+      <a href="/index.html" class="brand"><span class="logo-dot"></span>VIX<span class="thin">/Neural</span></a>
+    </div>
+    <nav class="hud-nav">
+      <a href="/progetti.html" class="active">Progetti</a>
+      <a href="/chi-sono.html">Chi Sono</a>
+      <a href="/contatti.html">Contatti</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1>Progetti</h1>
+    <p class="lead">Seleziona un tag per filtrare.</p>
+    <div class="filter-bar" id="filterBar"></div>
+    <section class="cards" id="projectsGrid"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Chiudi">×</button>
+      <h3 id="mTitle"></h3>
+      <p id="mDesc"></p>
+      <div class="tags" id="mTags"></div>
+    </div>
+  </div>
+
+  <footer class="footer">© VIX 2025 — Neural Core</footer>
+  <script src="/utz.js"></script>
+</body>
+</html>
