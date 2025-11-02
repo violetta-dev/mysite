@@ -88,7 +88,6 @@ async function loadProjects(){
   }catch(e){ console.error('projects load error',e); }
 }
 if(document.body.dataset.page==='projects') loadProjects();
-// v4.3: basic clock only
 (function(){
   const clockEl = document.getElementById('sys-time');
   if(clockEl){
@@ -98,5 +97,25 @@ if(document.body.dataset.page==='projects') loadProjects();
       clockEl.textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
     };
     tick(); setInterval(tick,1000);
+  }
+  const bar = document.querySelector('.filter-bar');
+  const grid = document.getElementById('projects-grid');
+  if(bar && grid){
+    bar.addEventListener('click', (e)=>{
+      const btn = e.target.closest('.pill');
+      if(!btn) return;
+      bar.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      grid.classList.add('fade');
+      const cards = Array.from(grid.querySelectorAll('.project'));
+      setTimeout(()=>{
+        cards.forEach(card=>{
+          const tags = (card.getAttribute('data-tags')||'').split(' ');
+          card.hidden = !(filter==='*' || tags.includes(filter));
+        });
+        grid.classList.remove('fade');
+      }, 120);
+    });
   }
 })();
