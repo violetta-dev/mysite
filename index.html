@@ -27,7 +27,8 @@
       </div>
     </div>
   </nav>
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js" defer>window.addEventListener('load',()=>{const c=document.getElementById('vixCursor');if(c)c.style.display='block';});
+</script>
 
   <header class="hero neural-bg">
     <div class="inner container">
@@ -67,7 +68,7 @@
   </footer>
 
   <!-- Vix cursor (inline, guaranteed) -->
-  <div id="vixCursor" style="position:fixed;top:0;left:0;width:20px;height:20px;border-radius:50%;background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;pointer-events:none;transform:translate(-50%,-50%);z-index:999999;opacity:1"></div>
+  <div id="vixCursor" style="display:block!important;opacity:1!important;z-index:999999!important;" style="position:fixed;top:0;left:0;width:20px;height:20px;border-radius:50%;background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;pointer-events:none;transform:translate(-50%,-50%);z-index:999999;opacity:1"></div>
   <script>
     (function(){
       const c=document.getElementById('vixCursor');
@@ -80,7 +81,8 @@
       const mo=new MutationObserver(()=>document.querySelectorAll('a,button,.btn,.card.click').forEach(hook));
       mo.observe(document.body,{childList:true,subtree:true});
     })();
-  </script>
+  window.addEventListener('load',()=>{const c=document.getElementById('vixCursor');if(c)c.style.display='block';});
+</script>
 
 
 <!-- Cookie Banner -->
@@ -102,6 +104,7 @@
     banner.style.bottom='-200px';
   });
 })();
+window.addEventListener('load',()=>{const c=document.getElementById('vixCursor');if(c)c.style.display='block';});
 </script>
 
 </body>
