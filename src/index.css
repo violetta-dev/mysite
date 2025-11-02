@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #0a0a0f;
+  --txt: #dcdcdc;
+}
+html, body, #root { height: 100%; }
+body{
+  background: var(--bg);
+  color: var(--txt);
+  font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+.neural-bg {
+  background-image: url('/src/assets/branding/background_hero.svg');
+  background-size: cover;
+  background-position: center;
+}
+.glow-text{
+  text-shadow: 0 0 18px rgba(165,94,234,0.45);
+}
+.card {
+  @apply rounded-2xl bg-black/40 border border-white/5 backdrop-blur-md shadow-vix-glow;
+}
+.btn-primary {
+  @apply px-5 py-3 rounded-xl bg-vix-primary/20 hover:bg-vix-primary/30 transition-colors border border-vix-primary/40;
+}
+.link {
+  @apply text-vix-primary hover:text-vix-neon transition-colors;
+}
+
+
+/* line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
