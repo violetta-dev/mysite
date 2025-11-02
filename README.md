@@ -1,10 +1,12 @@
 
-# VIX — Neural Core v2.2 (Clean Background + Soft Fade)
-- Sfondo video pulito (bg.mp4), senza griglia UV
-- Soft fade edge per eliminare micro-tagli su monitor ampi
-- Orbitron global font
-- Intro "Enter" solo alla prima visita (localStorage)
-- Navbar: Home / Progetti / Chi Sono / Competenze / Social
-- Social hub con pulsanti luminosi
-- Progetti dinamici via /projects.json (supporto "thumb")
-- Favicon + logo header: /assets/logo_vix.png
+# VIX — Neural Core v2.2.2 (Stable Core)
+- Video bg.mp4 pulito con soft fade 5/95 e +10% brightness
+- Header allineato, logo centrato, navbar stabile
+- Font Orbitron: titoli 700, testi 600 (display=swap)
+- Footer aderente senza tagli
+- Pagine interne uniformate
+- Progetti dinamici via /projects.json
+- Social hub (Discord/Twitch reali)
+- Nessun overlay UV, nessuna animazione extra
+
+Deploy: carica tutto in root repo (mantieni /assets/bg.mp4 e /assets/logo_vix.png).
