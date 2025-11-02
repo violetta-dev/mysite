@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIX // Progetti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style-v45.css" />
+</head>
+<body class="fade-in">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="pre-inner">
+      <img src="/assets/logo_vix.png" alt="VIX logo" />
+      <div class="bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Background video with soft parallax -->
+  <div class="video-wrap" id="videoWrap">
+    <video class="bg-video" id="bgVideo" autoplay muted loop playsinline poster="/assets/logo_vix.png">
+      <source src="/assets/bg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="grid-overlay"></div>
+  <div class="beam"></div>
+
+  <!-- Console / Sidebar -->
+  <aside class="console">
+    <div class="console-header">
+      <img src="/assets/logo_vix.png" class="logo" alt="VIX logo" />
+      <div class="brand">VIX // Neural Core</div>
+    </div>
+    <div class="console-status">
+      <span class="dot online"></span><span id="sys-label">ONLINE</span><span id="sys-time">--:--:--</span>
+    </div>
+    <label class="switch-row">
+      <input type="checkbox" id="overclock">
+      <span class="slider"></span>
+      <span class="lbl">Overclock</span>
+    </label>
+    <nav class="nav">
+      <a class="nav-link" href="/index.html">Home</a>
+      <a class="nav-link" href="/chi-sono.html">Chi Sono</a>
+      <a class="nav-link" href="/progetti.html">Progetti</a>
+      <a class="nav-link" href="/competenze.html">Competenze</a>
+      <a class="nav-link" href="/contatti.html">Contatti</a>
+    </nav>
+  </aside>
+
+  <main class="page">
+    <h1>Progetti</h1>
+    <p class="lead">Portfolio completo. Filtra per tag e apri i dettagli.</p>
+    <div class="filter-bar"><button class="pill active" data-filter="*">Tutti</button></div>
+    <section class="cards" id="projects-grid">
+      <p>Nessun progetto nel JSON.</p>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Chiudi">×</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <div class="tags" id="modal-tags"></div>
+    </div>
+  </div>
+
+  <footer class="footer">© VIX 2025 — Neural Core</footer>
+  <script src="/script.js"></script>
+</body>
+</html>

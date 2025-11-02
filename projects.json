@@ -1,0 +1,377 @@
+[
+  {
+    "title": "No Limit RP — Discord System & Bot Suite",
+    "year": 2025,
+    "status": "annullato",
+    "description": "Discord e bot multilivello con allowlist semi-automatica, IA per assistenza, suite anti-raid e anti-nuke.",
+    "tags": [
+      "DiscordDev",
+      "Python",
+      "Security",
+      "Branding"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Red Lives RP — Discord Custom & Bot",
+    "year": 2025,
+    "status": "annullato",
+    "description": "Creazione server Discord completo con bot custom, tree permission e sicurezza anti-tamper.",
+    "tags": [
+      "DiscordJS",
+      "SystemDesign",
+      "Security"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Imperialis RP — Discord Developer",
+    "year": 2025,
+    "status": "completed",
+    "description": "Gestione e ottimizzazione della struttura Discord e dei sistemi di automazione del server.",
+    "tags": [
+      "DiscordDev",
+      "SystemStructure",
+      "Automation"
+    ],
+    "link": ""
+  },
+  {
+    "title": "VeleTicket v2.0 — Gestione Parziale Ticket (Definitiva)",
+    "year": 2025,
+    "status": "active",
+    "description": "Versione definitiva del sistema VeleTicket, con gestione parziale dei ticket e architettura modulare.",
+    "tags": [
+      "Python",
+      "DiscordBot",
+      "Automation",
+      "UX"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Rebranding Twitch — GiorginoHTTV",
+    "year": 2025,
+    "status": "completed",
+    "description": "Restyling completo del canale Twitch: pannelli, transizioni, overlay e banner coordinati.",
+    "tags": [
+      "TwitchDesign",
+      "AfterEffects",
+      "Branding"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Overlay Pack — Luffy (Streamer)",
+    "year": 2025,
+    "status": "completed",
+    "description": "Pacchetto completo per Twitch: overlay, alert, intro/fine live, banner e grafica offline.",
+    "tags": [
+      "TwitchDesign",
+      "MotionGraphics",
+      "Branding"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Valtrix — YouTube Branding",
+    "year": 2025,
+    "status": "completed",
+    "description": "Creazione di banner, pannelli e identità visiva coerente per il canale YouTube Valtrix.",
+    "tags": [
+      "YouTubeDesign",
+      "Branding",
+      "Photoshop"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Los Aztecas RP — Web & Discord System",
+    "year": 2025,
+    "status": "in_development",
+    "description": "Sviluppo del sito ufficiale e sistema Discord per la gang RP italiana. Card dinamiche e integrazione con Discord API.",
+    "tags": [
+      "WebDev",
+      "HTML",
+      "CSS",
+      "DiscordAPI"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Sito Personale — Vix / Porpora WOW",
+    "year": 2025,
+    "status": "updated",
+    "description": "Creazione del sito personale, con animazioni glow, layout responsive e struttura pronta per aggiornamenti dinamici.",
+    "tags": [
+      "WebDesign",
+      "UIUX",
+      "HTML",
+      "CSS"
+    ],
+    "link": ""
+  },
+  {
+    "title": "NodeLink — Internal Bridge System",
+    "year": 2025,
+    "status": "posticipated",
+    "description": "Sistema di comunicazione interna tra bot multipli su diversi server Discord con API condivise.",
+    "tags": [
+      "NodeJS",
+      "Python",
+      "API",
+      "SystemIntegration"
+    ],
+    "link": ""
+  },
+  {
+    "title": "SecureOps Suite",
+    "year": 2025,
+    "status": "deprecated",
+    "description": "Configurazione avanzata di firewall, hardening Linux e sistemi anti-nuke per reti Discord e VPS.",
+    "tags": [
+      "SysAdmin",
+      "Security",
+      "Linux",
+      "Network"
+    ],
+    "link": ""
+  },
+  {
+    "title": "AutoDeploy System",
+    "year": 2025,
+    "status": "completed",
+    "description": "Setup di un sistema automatico di aggiornamento per bot Discord e siti web tramite webhook e script Python.",
+    "tags": [
+      "DevOps",
+      "Automation",
+      "Git",
+      "Python"
+    ],
+    "link": ""
+  },
+  {
+    "title": "SkyPanel – Dashboard di Controllo Bot",
+    "year": 2025,
+    "status": "in_development",
+    "description": "Prototipo di dashboard web per gestire più bot Discord da interfaccia centralizzata, con grafici e log in tempo reale.",
+    "tags": [
+      "WebDev",
+      "Dashboard",
+      "NodeJS",
+      "UIUX"
+    ],
+    "link": ""
+  },
+  {
+    "title": "PulseMonitor – System Health Tool",
+    "year": 2025,
+    "status": "in_development",
+    "description": "Script Python per monitoraggio uptime e prestazioni VPS, con report automatici via Discord.",
+    "tags": [
+      "Python",
+      "SysAdmin",
+      "Monitoring",
+      "Automation"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Remoria RP / Esperia Remastered RP",
+    "year": 2024,
+    "status": "annullato",
+    "description": "Supporto tecnico e grafico per community RP: ottimizzazione Discord, embed, categorie e gestione staff.",
+    "tags": [
+      "DiscordDev",
+      "GraphicDesign",
+      "Community"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Rome Reborn — Rebranding Grafico",
+    "year": 2024,
+    "status": "annullato",
+    "description": "Rebrand completo di logo e asset visivi per la community 'Rome Reborn RP'.",
+    "tags": [
+      "Branding",
+      "GraphicDesign",
+      "Photoshop"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Fast Help (AI Bot)",
+    "year": 2024,
+    "status": "deprecated",
+    "description": "Bot con IA integrata per risposta immediata ai ticket Discord con successivo intervento umano.",
+    "tags": [
+      "Python",
+      "AI",
+      "DiscordBot",
+      "Automation"
+    ],
+    "link": ""
+  },
+  {
+    "title": "ClusterOps – Gestione VPS e Automazioni",
+    "year": 2024,
+    "status": "completed",
+    "description": "Gestione di un cluster VPS multi-servizio: cronjob, firewall, logging e ottimizzazione processi Node e Python.",
+    "tags": [
+      "SysAdmin",
+      "Linux",
+      "Automation",
+      "Network"
+    ],
+    "link": ""
+  },
+  {
+    "title": "VeleTicket v1.6 — Centro Assistenza",
+    "year": 2024,
+    "status": "completed",
+    "description": "Versione avanzata del sistema di supporto Discord, con ping dedicati, log persistenti e interfaccia ottimizzata.",
+    "tags": [
+      "DiscordBot",
+      "Python",
+      "SystemArchitecture"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Porpora WOW — Portfolio Personale",
+    "year": 2024,
+    "status": "updated",
+    "description": "Sito web portfolio dinamico con glow interattivi, animazioni e struttura modulare.",
+    "tags": [
+      "WebDesign",
+      "HTML",
+      "UIUX"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Hydrastrix Crew Rebrand",
+    "year": 2023,
+    "status": "completed",
+    "description": "Rebranding grafico completo per la crew italiana 'Hydrastrix' (Sea of Thieves). Logo, banner, social pack e gestione Discord.",
+    "tags": [
+      "Branding",
+      "CommunityDesign",
+      "DiscordSetup"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Synapse Interface",
+    "year": 2023,
+    "status": "completed",
+    "description": "Concept UI futuristico basato su trasparenze, gradienti dinamici e motion design.",
+    "tags": [
+      "UIUX",
+      "Figma",
+      "AfterEffects"
+    ],
+    "link": ""
+  },
+  {
+    "title": "VeleTicket v1.5",
+    "year": 2023,
+    "status": "completed",
+    "description": "Upgrade tecnico con categorie personalizzate, logging automatico e gestione embed multi-canale.",
+    "tags": [
+      "Python",
+      "DiscordJS",
+      "Automation"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Aurora Brand System",
+    "year": 2022,
+    "status": "completed",
+    "description": "Identità visiva per una startup tecnologica: logotipo geometrico, icone SVG e linee guida grafiche.",
+    "tags": [
+      "Branding",
+      "LogoDesign",
+      "StyleGuide"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Corporate Web Identity",
+    "year": 2022,
+    "status": "completed",
+    "description": "Creazione loghi, landing page e siti vetrina per piccole aziende. Cura di UX, contenuti e layout responsive.",
+    "tags": [
+      "WebDesign",
+      "HTML",
+      "CSS",
+      "ClientProject"
+    ],
+    "link": ""
+  },
+  {
+    "title": "VeleTicket v1.0",
+    "year": 2022,
+    "status": "completed",
+    "description": "Primo sistema automatico di ticket su Discord, con embed e messaggi reattivi.",
+    "tags": [
+      "DiscordBot",
+      "Python",
+      "Automation"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Nebula UI",
+    "year": 2022,
+    "status": "completed",
+    "description": "Interfaccia modulare per dashboard gestionali. Struttura in HTML/JS e design accessibile in Figma.",
+    "tags": [
+      "UIUX",
+      "Frontend",
+      "Figma",
+      "WebDesign"
+    ],
+    "link": ""
+  },
+  {
+    "title": "ServerCore Monitor",
+    "year": 2022,
+    "status": "completed",
+    "description": "Setup e configurazione sistema di monitoraggio per VPS e server Linux. Script di backup automatici e logging.",
+    "tags": [
+      "SystemAdmin",
+      "Bash",
+      "Linux",
+      "Monitoring"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Digital Rebirth",
+    "year": 2021,
+    "status": "completed",
+    "description": "Restyling completo per un brand streetwear. Creazione logo, palette cromatica, tipografia e visual per merchandising.",
+    "tags": [
+      "Branding",
+      "GraphicDesign",
+      "Photoshop",
+      "Illustrator"
+    ],
+    "link": ""
+  },
+  {
+    "title": "Eclipse Motion Pack",
+    "year": 2021,
+    "status": "completed",
+    "description": "Pacchetto di intro e overlay animati per streamer. Realizzazione in After Effects con animazioni cinematic.",
+    "tags": [
+      "MotionDesign",
+      "AfterEffects",
+      "VideoEditing"
+    ],
+    "link": ""
+  }
+]
