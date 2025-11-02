@@ -6,29 +6,39 @@
   <title>VIX — Neural Core</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style-utz-v2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/logo_vix.png">
+  <link rel="apple-touch-icon" href="/assets/logo_vix.png">
+  <meta name="theme-color" content="#7b2fff">
+  <link rel="stylesheet" href="/style-v21.css" />
 </head>
 <body>
+  <!-- Landing Intro (persisted) -->
   <div id="intro">
     <div class="intro-inner">
       <img src="/assets/logo_vix.png" alt="VIX" class="intro-logo" />
       <div class="intro-copy">
         <h1>VIX</h1>
-        <p>Creative Dev • Motion • Systems</p>
+        <p>Neural Core — Creative Systems</p>
       </div>
       <button id="enterBtn" class="btn primary">Enter</button>
     </div>
   </div>
 
+  <!-- Background video -->
   <video class="bg-video" autoplay muted loop playsinline poster="/assets/logo_vix.png">
     <source src="/assets/bg.mp4" type="video/mp4">
   </video>
   <div class="grid-overlay"></div>
 
+  <!-- Header with logo -->
   <header class="hud">
     <div class="hud-left">
-      <a href="/index.html" class="brand"><span class="logo-dot"></span>VIX<span class="thin">/Neural</span></a>
+      <a href="/index.html" class="brand">
+        <img src="/assets/logo_vix.png" alt="VIX" class="logo-header">
+        <span>VIX<span class="thin">/Neural</span></span>
+      </a>
     </div>
     <nav class="hud-nav">
       <a href="/index.html">Home</a>
@@ -71,6 +81,6 @@
   </main>
 
   <footer class="footer">© VIX 2025 — Neural Core</footer>
-  <script src="/utz-v2.js"></script>
+  <script src="/script-v21.js"></script>
 </body>
 </html>
