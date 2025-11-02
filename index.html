@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIX — Neural Core</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/logo_vix.png">
+  <link rel="apple-touch-icon" href="/assets/logo_vix.png">
+  <meta name="theme-color" content="#7b2fff">
+  <link rel="stylesheet" href="/style-v221.css" />
+</head>
+<body>
+  <!-- Landing Intro (persisted) -->
+  <div id="intro" aria-hidden="true">
+    <div class="intro-inner">
+      <img src="/assets/logo_vix.png" alt="VIX" class="intro-logo" />
+      <div class="intro-copy">
+        <h1>VIX</h1>
+        <p>Neural Core — Creative Systems</p>
+      </div>
+      <button id="enterBtn" class="btn primary" type="button">Enter</button>
+    </div>
+  </div>
+
+  <!-- Background video (clean, soft fade 5/95) -->
+  <video class="bg-video" autoplay muted loop playsinline poster="/assets/logo_vix.png">
+    <source src="/assets/bg.mp4" type="video/mp4">
+  </video>
+
+  <!-- Header with aligned logo -->
+  <header class="hud">
+    <a href="/index.html" class="brand">
+      <img src="/assets/logo_vix.png" alt="VIX" class="logo-header" />
+      <span class="brand-text">VIX<span class="thin">/Neural</span></span>
+    </a>
+    <nav class="hud-nav" aria-label="Main">
+      <a href="/index.html">Home</a>
+      <a href="/progetti.html">Progetti</a>
+      <a href="/chi-sono.html">Chi Sono</a>
+      <a href="/competenze.html">Competenze</a>
+      <a href="/social.html">Social</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-col">
+        <h2 class="fx-stroke">CREATIVE</h2>
+        <h2 class="fx-fill">SYSTEMS</h2>
+        <p class="lead">Portfolio tecnico-creativo: bot Discord, brand identity, web esperienziale, motion e 3D pipeline.</p>
+        <div class="row">
+          <a href="/progetti.html" class="btn ghost">Vedi Progetti</a>
+          <a href="/chi-sono.html" class="btn link">Chi Sono</a>
+        </div>
+      </div>
+      <div class="hero-blob" aria-hidden="true"></div>
+    </section>
+
+    <section class="teaser">
+      <article class="teaser-card">
+        <h3>VeleTicket</h3>
+        <p>Ticket system avanzato con UI embed reattiva e permessi granulari.</p>
+      </article>
+      <article class="teaser-card">
+        <h3>Los Aztecas</h3>
+        <p>Portale RP e architettura Discord con alias e profili giocatore.</p>
+      </article>
+      <article class="teaser-card">
+        <h3>Ni.Sa. Systems</h3>
+        <p>Branding e infrastruttura tech con pipeline creativa/motion.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">© VIX 2025 — Neural Core</footer>
+  <script src="/script-v221.js"></script>
+</body>
+</html>
