@@ -56,3 +56,28 @@ p.lead{max-width:720px;margin:10px auto 0;color:#d0cbe6}
 @media (max-width:640px){.grid.cols-3{grid-template-columns:1fr}h1{font-size:34px}}
 .fade-in{opacity:0;transform:translateY(14px);transition:.6s}
 .fade-in.appear{opacity:1;transform:none}
+
+
+/* --- Custom Vix cursor (glow circle) --- */
+body { cursor: none; }
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: rgba(165, 94, 234, 0.9);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: width .18s ease, height .18s ease, opacity .18s ease, background .18s ease;
+  z-index: 1000;
+  box-shadow: 0 0 18px rgba(165,94,234,.6);
+}
+.cursor.cursor--hover {
+  width: 24px; height: 24px;
+  opacity: 0.85;
+}
+.cursor.cursor--hidden { opacity: 0; }
+
+/* Make interactive elements show hover state on cursor */
+a, button, .btn, .card.click { cursor: none; }
