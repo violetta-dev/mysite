@@ -88,6 +88,7 @@ async function loadProjects(){
   }catch(e){ console.error('projects load error',e); }
 }
 if(document.body.dataset.page==='projects') loadProjects();
+// v4.3.2: clock + tag filter fade
 (function(){
   const clockEl = document.getElementById('sys-time');
   if(clockEl){
