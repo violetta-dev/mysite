@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIX // Progetti</title>
-  <link rel="preload" as="video" href="/assets/bg.mp4" type="video/mp4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
@@ -16,17 +15,13 @@
   </video>
   <div class="grid-overlay"></div>
   <div class="beam"></div>
-  <canvas id="particles"></canvas>
-
   <aside class="console">
     <div class="console-header">
-      <img src="/assets/logo_vix.png" alt="VIX logo" class="logo">
+      <img src="/assets/logo_vix.png" class="logo" alt="VIX logo" />
       <div class="brand">VIX // Neural Core</div>
     </div>
     <div class="console-status">
-      <span class="dot online"></span>
-      <span id="sys-label">ONLINE</span>
-      <span id="sys-time">--:--:--</span>
+      <span class="dot online"></span><span id="sys-label">ONLINE</span><span id="sys-time">--:--:--</span>
     </div>
     <label class="switch-row">
       <input type="checkbox" id="overclock">
@@ -34,204 +29,24 @@
       <span class="lbl">Overclock</span>
     </label>
     <nav class="nav">
-      <a href="/index.html" class="nav-link">Home</a>
-      <a href="/chi-sono.html" class="nav-link">Chi Sono</a>
-      <a href="/progetti.html" class="nav-link">Progetti</a>
-      <a href="/competenze.html" class="nav-link">Competenze</a>
-      <a href="/contatti.html" class="nav-link">Contatti</a>
+      <a class="nav-link" href="/index.html">Home</a>
+      <a class="nav-link" href="/chi-sono.html">Chi Sono</a>
+      <a class="nav-link" href="/progetti.html">Progetti</a>
+      <a class="nav-link" href="/competenze.html">Competenze</a>
+      <a class="nav-link" href="/contatti.html">Contatti</a>
     </nav>
   </aside>
 
   <main class="page">
     <h1>Progetti</h1>
     <p class="lead">Portfolio completo. Filtra per tag.</p>
-    <div class="filter-bar"><button class="pill active" data-filter="*">Tutti</button><button class="pill violet" data-filter="discorddev">DiscordDev</button><button class="pill cyan" data-filter="python">Python</button><button class="pill teal" data-filter="security">Security</button><button class="pill pink" data-filter="branding">Branding</button><button class="pill violet" data-filter="discordjs">DiscordJS</button><button class="pill cyan" data-filter="systemdesign">SystemDesign</button><button class="pill teal" data-filter="systemstructure">SystemStructure</button><button class="pill pink" data-filter="automation">Automation</button><button class="pill violet" data-filter="discordbot">DiscordBot</button><button class="pill cyan" data-filter="ux">UX</button><button class="pill teal" data-filter="twitchdesign">TwitchDesign</button><button class="pill pink" data-filter="aftereffects">AfterEffects</button><button class="pill violet" data-filter="motiongraphics">MotionGraphics</button><button class="pill cyan" data-filter="youtubedesign">YouTubeDesign</button><button class="pill teal" data-filter="photoshop">Photoshop</button><button class="pill pink" data-filter="webdev">WebDev</button><button class="pill violet" data-filter="html">HTML</button><button class="pill cyan" data-filter="css">CSS</button><button class="pill teal" data-filter="discordapi">DiscordAPI</button><button class="pill pink" data-filter="webdesign">WebDesign</button><button class="pill violet" data-filter="uiux">UIUX</button><button class="pill cyan" data-filter="nodejs">NodeJS</button><button class="pill teal" data-filter="api">API</button><button class="pill pink" data-filter="systemintegration">SystemIntegration</button><button class="pill violet" data-filter="sysadmin">SysAdmin</button><button class="pill cyan" data-filter="linux">Linux</button><button class="pill teal" data-filter="network">Network</button><button class="pill pink" data-filter="devops">DevOps</button><button class="pill violet" data-filter="git">Git</button><button class="pill cyan" data-filter="dashboard">Dashboard</button><button class="pill teal" data-filter="monitoring">Monitoring</button><button class="pill pink" data-filter="graphicdesign">GraphicDesign</button><button class="pill violet" data-filter="community">Community</button><button class="pill cyan" data-filter="ai">AI</button><button class="pill teal" data-filter="systemarchitecture">SystemArchitecture</button><button class="pill pink" data-filter="communitydesign">CommunityDesign</button><button class="pill violet" data-filter="discordsetup">DiscordSetup</button><button class="pill cyan" data-filter="figma">Figma</button><button class="pill teal" data-filter="logodesign">LogoDesign</button><button class="pill pink" data-filter="styleguide">StyleGuide</button><button class="pill violet" data-filter="clientproject">ClientProject</button><button class="pill cyan" data-filter="frontend">Frontend</button><button class="pill teal" data-filter="systemadmin">SystemAdmin</button><button class="pill pink" data-filter="bash">Bash</button><button class="pill violet" data-filter="illustrator">Illustrator</button><button class="pill cyan" data-filter="motiondesign">MotionDesign</button><button class="pill teal" data-filter="videoediting">VideoEditing</button></div>
+    <div class="filter-bar"><button class="pill active" data-filter="*">Tutti</button></div>
     <section class="cards" id="projects-grid">
-      
-      <article class="card project" data-tags="discorddev python security branding">
-        <h3>No Limit RP — Discord System &amp; Bot Suite</h3>
-        <p>Discord e bot multilivello con allowlist semi-automatica, IA per assistenza, suite anti-raid e anti-nuke.</p>
-        <div class="tags"><span>DiscordDev</span> <span>Python</span> <span>Security</span> <span>Branding</span></div>
-      </article>
-    
-      <article class="card project" data-tags="discordjs systemdesign security">
-        <h3>Red Lives RP — Discord Custom &amp; Bot</h3>
-        <p>Creazione server Discord completo con bot custom, tree permission e sicurezza anti-tamper.</p>
-        <div class="tags"><span>DiscordJS</span> <span>SystemDesign</span> <span>Security</span></div>
-      </article>
-    
-      <article class="card project" data-tags="discorddev systemstructure automation">
-        <h3>Imperialis RP — Discord Developer</h3>
-        <p>Gestione e ottimizzazione della struttura Discord e dei sistemi di automazione del server.</p>
-        <div class="tags"><span>DiscordDev</span> <span>SystemStructure</span> <span>Automation</span></div>
-      </article>
-    
-      <article class="card project" data-tags="python discordbot automation ux">
-        <h3>VeleTicket v2.0 — Gestione Parziale Ticket (Definitiva)</h3>
-        <p>Versione definitiva del sistema VeleTicket, con gestione parziale dei ticket e architettura modulare.</p>
-        <div class="tags"><span>Python</span> <span>DiscordBot</span> <span>Automation</span> <span>UX</span></div>
-      </article>
-    
-      <article class="card project" data-tags="twitchdesign aftereffects branding">
-        <h3>Rebranding Twitch — GiorginoHTTV</h3>
-        <p>Restyling completo del canale Twitch: pannelli, transizioni, overlay e banner coordinati.</p>
-        <div class="tags"><span>TwitchDesign</span> <span>AfterEffects</span> <span>Branding</span></div>
-      </article>
-    
-      <article class="card project" data-tags="twitchdesign motiongraphics branding">
-        <h3>Overlay Pack — Luffy (Streamer)</h3>
-        <p>Pacchetto completo per Twitch: overlay, alert, intro/fine live, banner e grafica offline.</p>
-        <div class="tags"><span>TwitchDesign</span> <span>MotionGraphics</span> <span>Branding</span></div>
-      </article>
-    
-      <article class="card project" data-tags="youtubedesign branding photoshop">
-        <h3>Valtrix — YouTube Branding</h3>
-        <p>Creazione di banner, pannelli e identità visiva coerente per il canale YouTube Valtrix.</p>
-        <div class="tags"><span>YouTubeDesign</span> <span>Branding</span> <span>Photoshop</span></div>
-      </article>
-    
-      <article class="card project" data-tags="webdev html css discordapi">
-        <h3>Los Aztecas RP — Web &amp; Discord System</h3>
-        <p>Sviluppo del sito ufficiale e sistema Discord per la gang RP italiana. Card dinamiche e integrazione con Discord API.</p>
-        <div class="tags"><span>WebDev</span> <span>HTML</span> <span>CSS</span> <span>DiscordAPI</span></div>
-      </article>
-    
-      <article class="card project" data-tags="webdesign uiux html css">
-        <h3>Sito Personale — Vix / Porpora WOW</h3>
-        <p>Creazione del sito personale, con animazioni glow, layout responsive e struttura pronta per aggiornamenti dinamici.</p>
-        <div class="tags"><span>WebDesign</span> <span>UIUX</span> <span>HTML</span> <span>CSS</span></div>
-      </article>
-    
-      <article class="card project" data-tags="nodejs python api systemintegration">
-        <h3>NodeLink — Internal Bridge System</h3>
-        <p>Sistema di comunicazione interna tra bot multipli su diversi server Discord con API condivise.</p>
-        <div class="tags"><span>NodeJS</span> <span>Python</span> <span>API</span> <span>SystemIntegration</span></div>
-      </article>
-    
-      <article class="card project" data-tags="sysadmin security linux network">
-        <h3>SecureOps Suite</h3>
-        <p>Configurazione avanzata di firewall, hardening Linux e sistemi anti-nuke per reti Discord e VPS.</p>
-        <div class="tags"><span>SysAdmin</span> <span>Security</span> <span>Linux</span> <span>Network</span></div>
-      </article>
-    
-      <article class="card project" data-tags="devops automation git python">
-        <h3>AutoDeploy System</h3>
-        <p>Setup di un sistema automatico di aggiornamento per bot Discord e siti web tramite webhook e script Python.</p>
-        <div class="tags"><span>DevOps</span> <span>Automation</span> <span>Git</span> <span>Python</span></div>
-      </article>
-    
-      <article class="card project" data-tags="webdev dashboard nodejs uiux">
-        <h3>SkyPanel – Dashboard di Controllo Bot</h3>
-        <p>Prototipo di dashboard web per gestire più bot Discord da interfaccia centralizzata, con grafici e log in tempo reale.</p>
-        <div class="tags"><span>WebDev</span> <span>Dashboard</span> <span>NodeJS</span> <span>UIUX</span></div>
-      </article>
-    
-      <article class="card project" data-tags="python sysadmin monitoring automation">
-        <h3>PulseMonitor – System Health Tool</h3>
-        <p>Script Python per monitoraggio uptime e prestazioni VPS, con report automatici via Discord.</p>
-        <div class="tags"><span>Python</span> <span>SysAdmin</span> <span>Monitoring</span> <span>Automation</span></div>
-      </article>
-    
-      <article class="card project" data-tags="discorddev graphicdesign community">
-        <h3>Remoria RP / Esperia Remastered RP</h3>
-        <p>Supporto tecnico e grafico per community RP: ottimizzazione Discord, embed, categorie e gestione staff.</p>
-        <div class="tags"><span>DiscordDev</span> <span>GraphicDesign</span> <span>Community</span></div>
-      </article>
-    
-      <article class="card project" data-tags="branding graphicdesign photoshop">
-        <h3>Rome Reborn — Rebranding Grafico</h3>
-        <p>Rebrand completo di logo e asset visivi per la community &#x27;Rome Reborn RP&#x27;.</p>
-        <div class="tags"><span>Branding</span> <span>GraphicDesign</span> <span>Photoshop</span></div>
-      </article>
-    
-      <article class="card project" data-tags="python ai discordbot automation">
-        <h3>Fast Help (AI Bot)</h3>
-        <p>Bot con IA integrata per risposta immediata ai ticket Discord con successivo intervento umano.</p>
-        <div class="tags"><span>Python</span> <span>AI</span> <span>DiscordBot</span> <span>Automation</span></div>
-      </article>
-    
-      <article class="card project" data-tags="sysadmin linux automation network">
-        <h3>ClusterOps – Gestione VPS e Automazioni</h3>
-        <p>Gestione di un cluster VPS multi-servizio: cronjob, firewall, logging e ottimizzazione processi Node e Python.</p>
-        <div class="tags"><span>SysAdmin</span> <span>Linux</span> <span>Automation</span> <span>Network</span></div>
-      </article>
-    
-      <article class="card project" data-tags="discordbot python systemarchitecture">
-        <h3>VeleTicket v1.6 — Centro Assistenza</h3>
-        <p>Versione avanzata del sistema di supporto Discord, con ping dedicati, log persistenti e interfaccia ottimizzata.</p>
-        <div class="tags"><span>DiscordBot</span> <span>Python</span> <span>SystemArchitecture</span></div>
-      </article>
-    
-      <article class="card project" data-tags="webdesign html uiux">
-        <h3>Porpora WOW — Portfolio Personale</h3>
-        <p>Sito web portfolio dinamico con glow interattivi, animazioni e struttura modulare.</p>
-        <div class="tags"><span>WebDesign</span> <span>HTML</span> <span>UIUX</span></div>
-      </article>
-    
-      <article class="card project" data-tags="branding communitydesign discordsetup">
-        <h3>Hydrastrix Crew Rebrand</h3>
-        <p>Rebranding grafico completo per la crew italiana &#x27;Hydrastrix&#x27; (Sea of Thieves). Logo, banner, social pack e gestione Discord.</p>
-        <div class="tags"><span>Branding</span> <span>CommunityDesign</span> <span>DiscordSetup</span></div>
-      </article>
-    
-      <article class="card project" data-tags="uiux figma aftereffects">
-        <h3>Synapse Interface</h3>
-        <p>Concept UI futuristico basato su trasparenze, gradienti dinamici e motion design.</p>
-        <div class="tags"><span>UIUX</span> <span>Figma</span> <span>AfterEffects</span></div>
-      </article>
-    
-      <article class="card project" data-tags="python discordjs automation">
-        <h3>VeleTicket v1.5</h3>
-        <p>Upgrade tecnico con categorie personalizzate, logging automatico e gestione embed multi-canale.</p>
-        <div class="tags"><span>Python</span> <span>DiscordJS</span> <span>Automation</span></div>
-      </article>
-    
-      <article class="card project" data-tags="branding logodesign styleguide">
-        <h3>Aurora Brand System</h3>
-        <p>Identità visiva per una startup tecnologica: logotipo geometrico, icone SVG e linee guida grafiche.</p>
-        <div class="tags"><span>Branding</span> <span>LogoDesign</span> <span>StyleGuide</span></div>
-      </article>
-    
-      <article class="card project" data-tags="webdesign html css clientproject">
-        <h3>Corporate Web Identity</h3>
-        <p>Creazione loghi, landing page e siti vetrina per piccole aziende. Cura di UX, contenuti e layout responsive.</p>
-        <div class="tags"><span>WebDesign</span> <span>HTML</span> <span>CSS</span> <span>ClientProject</span></div>
-      </article>
-    
-      <article class="card project" data-tags="discordbot python automation">
-        <h3>VeleTicket v1.0</h3>
-        <p>Primo sistema automatico di ticket su Discord, con embed e messaggi reattivi.</p>
-        <div class="tags"><span>DiscordBot</span> <span>Python</span> <span>Automation</span></div>
-      </article>
-    
-      <article class="card project" data-tags="uiux frontend figma webdesign">
-        <h3>Nebula UI</h3>
-        <p>Interfaccia modulare per dashboard gestionali. Struttura in HTML/JS e design accessibile in Figma.</p>
-        <div class="tags"><span>UIUX</span> <span>Frontend</span> <span>Figma</span> <span>WebDesign</span></div>
-      </article>
-    
-      <article class="card project" data-tags="systemadmin bash linux monitoring">
-        <h3>ServerCore Monitor</h3>
-        <p>Setup e configurazione sistema di monitoraggio per VPS e server Linux. Script di backup automatici e logging.</p>
-        <div class="tags"><span>SystemAdmin</span> <span>Bash</span> <span>Linux</span> <span>Monitoring</span></div>
-      </article>
-    
-      <article class="card project" data-tags="branding graphicdesign photoshop illustrator">
-        <h3>Digital Rebirth</h3>
-        <p>Restyling completo per un brand streetwear. Creazione logo, palette cromatica, tipografia e visual per merchandising.</p>
-        <div class="tags"><span>Branding</span> <span>GraphicDesign</span> <span>Photoshop</span> <span>Illustrator</span></div>
-      </article>
-    
-      <article class="card project" data-tags="motiondesign aftereffects videoediting">
-        <h3>Eclipse Motion Pack</h3>
-        <p>Pacchetto di intro e overlay animati per streamer. Realizzazione in After Effects con animazioni cinematic.</p>
-        <div class="tags"><span>MotionDesign</span> <span>AfterEffects</span> <span>VideoEditing</span></div>
-      </article>
-    
+      <p>Nessun progetto nel JSON.</p>
     </section>
   </main>
 
-  <footer class="footer"><p>© VIX 2025 — Neural Core</p></footer>
+  <footer class="footer">© VIX 2025 — Neural Core</footer>
   <script src="/script.js"></script>
 </body>
 </html>
