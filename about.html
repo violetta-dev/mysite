@@ -16,6 +16,44 @@
   <title>Chi sono — Vix</title>
 </head>
 <body>
+
+<canvas id="vixBackground" style="position:fixed;top:0;left:0;width:100%;height:100%;
+z-index:-1;pointer-events:none;"></canvas>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const canvas=document.getElementById('vixBackground');
+  const ctx=canvas.getContext('2d');
+  let w,h,pr=window.devicePixelRatio||1;
+  function resize(){
+    w=window.innerWidth;h=window.innerHeight;
+    canvas.width=w*pr;canvas.height=h*pr;
+    ctx.scale(pr,pr);
+  }
+  window.addEventListener('resize',resize);
+  resize();
+  let t=0,mouse={x:w/2,y:h/2};
+  window.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    for(let i=0;i<20;i++){
+      const y=h/2+Math.sin((t/50)+(i/2))*80+Math.sin(mouse.x/w*2*Math.PI+i)*40;
+      ctx.beginPath();
+      ctx.moveTo(0,y);
+      for(let x=0;x<w;x+=5){
+        ctx.lineTo(x,h/2+Math.sin(x/100+i+t/40)*60*Math.cos((mouse.y/h)*Math.PI)+Math.sin((t+i)/30)*30);
+      }
+      const hue=(280+(i*10))%360;
+      ctx.strokeStyle=`hsla(${hue},80%,70%,0.08)`;
+      ctx.lineWidth=2;
+      ctx.stroke();
+    }
+    t+=1.5;
+    requestAnimationFrame(draw);
+  }
+  draw();
+});
+</script>
+
   <nav class="nav">
     <div class="container wrap">
       <div class="brand"><img src="/assets/branding/logo_main.png" alt="logo"><span>VIX SYSTEMS</span></div>
