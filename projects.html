@@ -62,7 +62,7 @@
   <script src="/assets/js/projects.js" defer></script>
 
   <footer class="footer">
-    © 2025 Vix Systems — realizzata con passione e precisione neurale.
+    © 2025 Vix Systems — realizzata con passione e precisione neurale · <a href="/privacy.html">Privacy</a>
   </footer>
 
   <!-- Vix cursor (inline, guaranteed) -->
@@ -80,6 +80,28 @@
       mo.observe(document.body,{childList:true,subtree:true});
     })();
   </script>
+
+
+<!-- Cookie Banner -->
+<div id="cookieBanner" style="position:fixed;bottom:-200px;left:50%;transform:translateX(-50%);width:90%;max-width:600px;background:rgba(20,10,30,0.9);color:#e0d8f5;padding:20px;border-radius:12px;box-shadow:0 0 20px rgba(165,94,234,0.5);font-size:15px;line-height:1.5;z-index:99999;transition:bottom .6s ease;">
+  <p style="margin-bottom:10px;text-align:center;">Questo sito utilizza cookie tecnici per garantire un’esperienza ottimale.<br>Continuando la navigazione accetti la nostra politica di utilizzo.</p>
+  <div style="text-align:center;">
+    <button id="cookieAccept" style="background:#a55eea;border:none;padding:10px 20px;color:white;font-weight:600;border-radius:8px;cursor:pointer;box-shadow:0 0 10px rgba(165,94,234,0.6);transition:all .3s;">Accetto</button>
+  </div>
+</div>
+<script>
+(function(){
+  const banner=document.getElementById('cookieBanner');
+  const btn=document.getElementById('cookieAccept');
+  if(!localStorage.getItem('vix_cookie_ok')){
+    setTimeout(()=>banner.style.bottom='20px',500);
+  }
+  btn.addEventListener('click',()=>{
+    localStorage.setItem('vix_cookie_ok','true');
+    banner.style.bottom='-200px';
+  });
+})();
+</script>
 
 </body>
 </html>
