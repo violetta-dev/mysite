@@ -45,3 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   observer.observe(document.body, { childList: true, subtree: true });
 })();
+
+setTimeout(()=>{const c=document.querySelector('.cursor');if(c)c.style.opacity='1';},100);

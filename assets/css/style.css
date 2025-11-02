@@ -58,26 +58,36 @@ p.lead{max-width:720px;margin:10px auto 0;color:#d0cbe6}
 .fade-in.appear{opacity:1;transform:none}
 
 
-/* --- Custom Vix cursor (glow circle) --- */
-body { cursor: none; }
+
+
+
+
+/* --- Vix Cursor Always Visible (v3.2.2) --- */
+body { cursor: none !important; }
+
 .cursor {
   position: fixed;
-  top: 0; left: 0;
-  width: 14px; height: 14px;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: rgba(165, 94, 234, 0.9);
+  background: #c586fc;
+  box-shadow: 0 0 10px #c586fc, 0 0 25px #a55eea;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
-  transition: width .18s ease, height .18s ease, opacity .18s ease, background .18s ease;
-  z-index: 1000;
-  box-shadow: 0 0 18px rgba(165,94,234,.6);
+  z-index: 99999 !important;
+  opacity: 1 !important;
+  transition: width .2s, height .2s, background .2s, box-shadow .2s;
 }
-.cursor.cursor--hover {
-  width: 24px; height: 24px;
-  opacity: 0.85;
-}
-.cursor.cursor--hidden { opacity: 0; }
 
-/* Make interactive elements show hover state on cursor */
-a, button, .btn, .card.click { cursor: none; }
+.cursor.cursor--hover {
+  width: 26px;
+  height: 26px;
+  background: #d4a8ff;
+  box-shadow: 0 0 20px #d4a8ff, 0 0 30px #b47aff;
+}
+
+.cursor.cursor--hidden { opacity: 1 !important; }
+
+a, button, .btn, .card.click { cursor: none !important; }
