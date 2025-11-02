@@ -65,5 +65,22 @@
   <footer class="footer">
     © 2025 Vix Systems — realizzata con passione e precisione neurale.
   </footer>
+
+  <!-- Vix cursor (inline, guaranteed) -->
+  <div id="vixCursor" style="position:fixed;top:0;left:0;width:20px;height:20px;border-radius:50%;background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;pointer-events:none;transform:translate(-50%,-50%);z-index:999999;opacity:1"></div>
+  <script>
+    (function(){
+      const c=document.getElementById('vixCursor');
+      if(!c) return;
+      try{ document.body.style.cursor='none'; }catch(e){}
+      window.addEventListener('mousemove',e=>{ c.style.left=e.clientX+'px'; c.style.top=e.clientY+'px'; });
+      const hook=(el)=>{ el.addEventListener('mouseenter',()=>c.style.transform='translate(-50%,-50%) scale(1.6)');
+                          el.addEventListener('mouseleave',()=>c.style.transform='translate(-50%,-50%) scale(1)'); };
+      document.querySelectorAll('a,button,.btn,.card.click').forEach(hook);
+      const mo=new MutationObserver(()=>document.querySelectorAll('a,button,.btn,.card.click').forEach(hook));
+      mo.observe(document.body,{childList:true,subtree:true});
+    })();
+  </script>
+
 </body>
 </html>

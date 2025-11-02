@@ -1,3 +1,4 @@
+// Core site init (no custom cursor here)
 document.addEventListener('DOMContentLoaded', () => {
   // Fade-in on scroll
   const obs = new IntersectionObserver((entries)=>{
@@ -14,36 +15,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 })
-
-
-// --- Vix custom cursor logic ---
-(function(){
-  const c = document.createElement('div');
-  c.className = 'cursor';
-  document.body.appendChild(c);
-
-  let hideTimeout = null;
-  function move(e){
-    c.style.top = e.clientY + 'px';
-    c.style.left = e.clientX + 'px';
-    c.classList.remove('cursor--hidden');
-    if(hideTimeout) clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(()=>c.classList.add('cursor--hidden'), 1500);
-  }
-  window.addEventListener('mousemove', move);
-
-  // Hover enlargement on interactive elements
-  const addHover = (el) => {
-    el.addEventListener('mouseenter', ()=>c.classList.add('cursor--hover'));
-    el.addEventListener('mouseleave', ()=>c.classList.remove('cursor--hover'));
-  };
-  document.querySelectorAll('a, button, .btn, .card.click').forEach(addHover);
-
-  // Re-scan on DOM changes (e.g., after modal open)
-  const observer = new MutationObserver(()=>{
-    document.querySelectorAll('a, button, .btn, .card.click').forEach(addHover);
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
-})();
-
-setTimeout(()=>{const c=document.querySelector('.cursor');if(c)c.style.opacity='1';},100);
