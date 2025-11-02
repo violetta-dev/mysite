@@ -400,3 +400,35 @@ footer {
   box-shadow: 0 -1px 8px rgba(0,0,0,0.2);
 }
 
+
+
+/* --- FINAL MERGE FIX v3.2 --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0a0018 !important;
+}
+
+video.bg-video {
+  position: fixed !important;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -100 !important;
+  opacity: 0.25;
+  filter: contrast(1.15) brightness(1.1) saturate(1.2);
+}
+
+footer {
+  background: linear-gradient(180deg, rgba(75, 0, 130, 0.8) 0%, rgba(45, 0, 75, 0.95) 100%) !important;
+  color: #eee !important;
+  padding: 30px 0;
+  text-align: center;
+  border: none !important;
+  position: relative;
+  z-index: 2 !important;
+  box-shadow: 0 -1px 8px rgba(0,0,0,0.2);
+}
+
