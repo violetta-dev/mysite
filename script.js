@@ -88,3 +88,44 @@ async function loadProjects(){
   }catch(e){ console.error('projects load error',e); }
 }
 if(document.body.dataset.page==='projects') loadProjects();
+// v4.2 UI helpers
+(function(){
+  const clockEl = document.getElementById('sys-time');
+  if(clockEl){
+    const pad = n => String(n).padStart(2,'0');
+    const tick = ()=>{
+      const d = new Date();
+      clockEl.textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    };
+    tick(); setInterval(tick,1000);
+  }
+
+  // Smooth fade between pages
+  document.querySelectorAll('a[href$=".html"], a.nav-link').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const url = a.getAttribute('href');
+      if(!url || url.startsWith('#') || url.startsWith('http')) return;
+      e.preventDefault();
+      document.body.classList.remove('fade-in');
+      document.body.style.opacity = '0';
+      setTimeout(()=>{ window.location.href = url; }, 150);
+    });
+  });
+
+  // Projects grid
+  const grid = document.getElementById('projects-grid');
+  if(grid){
+    fetch('/projects.json')
+      .then(r=>r.ok ? r.json() : [])
+      .then(list=>{
+        if(!Array.isArray(list)) return;
+        grid.innerHTML = list.map(p=>`
+          <article class="card">
+            <h3>${p.title||'Progetto'}</h3>
+            <p>${p.description||''}</p>
+            ${p.link ? `<p><a href="${p.link}" target="_blank" rel="noopener">Apri</a></p>` : ''}
+          </article>`).join('');
+      })
+      .catch(()=>{});
+  }
+})();

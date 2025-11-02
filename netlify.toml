@@ -1,4 +1,4 @@
-# Redirects for clean URLs
+# Netlify redirects
 [[redirects]]
   from = "/chi-sono"
   to = "/chi-sono.html"

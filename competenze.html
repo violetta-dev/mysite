@@ -1,45 +1,52 @@
 <!DOCTYPE html>
-<html lang="it"><head>
-  <base href=\"./\">
-<title>VIX // Competenze</title>  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="VIX // Neural Core" />
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIX // Competenze</title>
+  <link rel="preload" as="video" href="/assets/bg.mp4" type="video/mp4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
-<body data-page="skills" class="fade-in">
-  <video class="bg-video" autoplay muted loop playsinline poster="assets/logo_vix.png">
-    <source src="assets/bg.mp4" type="video/mp4" />
+<body class="fade-in">
+  <video class="bg-video" autoplay muted loop playsinline poster="/assets/logo_vix.png">
+    <source src="/assets/bg.mp4" type="video/mp4">
   </video>
   <div class="grid-overlay"></div>
   <div class="beam"></div>
   <canvas id="particles"></canvas>
-  <aside class="console compact">
-    <div class="console-header row">
-      <img src="assets/logo_vix.png" class="logo" alt="Vix logo">
-      <div class="title">VIX // Neural Core</div>
+
+  <aside class="console">
+    <div class="console-header">
+      <img src="/assets/logo_vix.png" alt="VIX logo" class="logo">
+      <div class="brand">VIX // Neural Core</div>
     </div>
     <div class="console-status">
-      <span class="led led-online"></span> ONLINE
-      <span class="sys-time" id="sys-time">--:--:--</span>
+      <span class="dot online"></span>
+      <span id="sys-label">ONLINE</span>
+      <span id="sys-time">--:--:--</span>
     </div>
-    <div class="console-toggle">
-      <label class="switch">
-        <input type="checkbox" id="overclock">
-        <span class="slider"></span>
-      </label>
-      <span class="toggle-label">Overclock</span>
-    </div>
-    <nav class="console-nav">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="chi-sono.html">Chi sono</a>
-      <a class="nav-link" href="progetti.html">Progetti</a>
-      <a class="nav-link" href="competenze.html">Competenze</a>
-      <a class="nav-link" href="contatti.html">Contatti</a>
+    <label class="switch-row">
+      <input type="checkbox" id="overclock">
+      <span class="slider"></span>
+      <span class="lbl">Overclock</span>
+    </label>
+    <nav class="nav">
+      <a href="/index.html" class="nav-link">Home</a>
+      <a href="/chi-sono.html" class="nav-link">Chi Sono</a>
+      <a href="/progetti.html" class="nav-link">Progetti</a>
+      <a href="/competenze.html" class="nav-link">Competenze</a>
+      <a href="/contatti.html" class="nav-link">Contatti</a>
     </nav>
   </aside>
+
+  <main class="page">
+    <div class="legacy"><div class="grid-overlay"></div>
+  <div class="beam"></div>
+  <canvas id="particles"></canvas>
+  
 
 <main class="page">
 <section class="panel">
@@ -71,10 +78,10 @@
     </ul>
   </div>
 </section>
-</main>
-  <footer class="footer"><div class="container"><p>© VIX — Neural Core</p></div></footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+</main></div>
+  </main>
 
-</body></html>
+  <footer class="footer"><p>© VIX — Neural Core</p></footer>
+  <script src="/script.js"></script>
+</body>
+</html>
