@@ -1,20 +1,11 @@
 
-# VIX — UTZ Style v1 (MVP)
+# VIX — UTZ Style v2 (Complete & Cinematic)
 
-Ispirazione: transizione immersiva, grid, minimalismo che mette al centro i progetti.
+- Landing "Enter" funzionale (fade-out → mostra la pagina)
+- Home hero + teaser
+- Chi Sono / Competenze (testi integrati)
+- Progetti dinamici via /projects.json (supporto thumbnail `thumb`)
+- Social (pagina separata)
+- Contatti (Netlify form-ready)
 
-## File
-- /index.html — intro immersiva + hero
-- /progetti.html — griglia dinamica (fetch di /projects.json)
-- /chi-sono.html — about minimal
-- /contatti.html — form Netlify-ready
-- /style-utz.css — tema
-- /utz.js — intro, loader progetti, modale, filtro
-
-## Requisiti
-- Mantieni la tua cartella /assets con: logo_vix.png e bg.mp4
-- Aggiungi /projects.json (stessa struttura della tua 4.5.1)
-
-## Deploy
-- Carica tutto in root repo (Netlify o GitHub Pages)
-- Ctrl+F5 per cache
+Assets: /assets/logo_vix.png, /assets/bg.mp4, /projects.json (+ opzionale /assets/projects/*.webp)

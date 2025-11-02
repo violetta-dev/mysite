@@ -1,0 +1,58 @@
+/* CSS v2 (see previous build content) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@600;800&display=swap');
+:root{--ink:#060012;--grid:rgba(255,255,255,.035);--violet:#b47bff;--violet-d:#6a32c9;--text:#ece8ff;--muted:#c7b7ef}
+*{box-sizing:border-box} html,body{height:100%;margin:0;background:var(--ink);color:var(--text);font-family:Inter,system-ui,sans-serif}
+.bg-video{position:fixed;inset:0;z-index:-100;width:100vw;height:100vh;object-fit:cover;opacity:.24;filter:contrast(1.2) brightness(1.06) saturate(1.2)}
+.grid-overlay{position:fixed;inset:0;z-index:-90;background-image:linear-gradient(var(--grid) 1px, transparent 1px),linear-gradient(90deg, var(--grid) 1px, transparent 1px);background-size:60px 60px;pointer-events:none}
+.hud{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:16px 22px;z-index:10}
+.brand{font-family:Orbitron,Inter,sans-serif;font-weight:800;letter-spacing:.02em;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand .thin{opacity:.7;font-weight:600}.logo-dot{width:8px;height:8px;border-radius:50%;background:#48e3c2;box-shadow:0 0 10px #48e3c2;display:inline-block}
+.hud-nav a{color:#fff;text-decoration:none;margin-left:18px;opacity:.85;transition:.18s}
+.hud-nav a:hover,.hud-nav a.active{opacity:1;text-shadow:0 0 12px rgba(180,123,255,.55)}
+.wrap{max-width:1100px;margin:0 auto;padding:120px 24px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;min-height:75vh}
+.fx-stroke{-webkit-text-stroke:1px rgba(255,255,255,.9);color:transparent;font:800 96px Orbitron,Inter,sans-serif;letter-spacing:.02em;line-height:1}
+.fx-fill{color:#fff;font:800 96px Orbitron,Inter,sans-serif;margin:-18px 0 0;letter-spacing:.02em}
+.lead{color:var(--muted);max-width:54ch}
+.row{display:flex;gap:14px;margin-top:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:14px;border:1px solid rgba(255,255,255,.18);color:#fff;text-decoration:none;background:rgba(255,255,255,.08);backdrop-filter:blur(6px);transition:.15s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.btn.primary{background:linear-gradient(180deg,var(--violet) 0%,var(--violet-d) 100%);border:none}
+.btn.link{border:none;background:transparent;text-decoration:underline dotted}
+.btn.ghost:hover{background:rgba(255,255,255,.16)}
+.hero-blob{height:360px;border-radius:28px;background:linear-gradient(160deg, rgba(180,123,255,.22), rgba(255,140,220,.18));filter:blur(18px)}
+.teaser{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.teaser-card{background:rgba(20,0,38,.7);border:1px solid rgba(200,150,255,.18);border-radius:16px;padding:16px;transition:.15s}
+.teaser-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.about p{line-height:1.8}.about ul{line-height:1.8}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:16px}
+.card{background:rgba(20,0,38,.7);border:1px solid rgba(200,150,255,.18);border-radius:16px;padding:14px;transition:transform .15s ease, box-shadow .15s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.card h3{margin:6px 0 8px}.card p{margin:0 0 10px;color:#ddd}
+.tags{display:flex;gap:8px;flex-wrap:wrap}.tags span{font-size:.85rem;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15)}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 18px}
+.filter-bar .pill{border:none;border-radius:999px;padding:8px 14px;cursor:pointer;background:rgba(255,255,255,.10);color:#eee;transition:.12s}
+.filter-bar .pill:hover{transform:translateY(-1px)}
+.filter-bar .pill.active{box-shadow:0 0 0 2px rgba(255,255,255,.22), 0 6px 20px rgba(0,0,0,.35);background:rgba(255,255,255,.18)}
+.modal{position:fixed;inset:0;background:rgba(7,0,20,.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+.modal[aria-hidden="false"]{display:flex}
+.modal-card{max-width:780px;width:100%;background:rgba(20,0,38,.95);border:1px solid rgba(200,150,255,.25);border-radius:16px;padding:18px;box-shadow:0 10px 35px rgba(0,0,0,.45);position:relative}
+.modal-close{position:absolute;right:18px;top:10px;background:transparent;border:none;color:#fff;font-size:28px;cursor:pointer}
+.modal-media img{max-width:100%;border-radius:12px;display:block;margin-bottom:10px}
+.social-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:10px}
+.social-card{display:flex;align-items:center;justify-content:center;height:120px;border-radius:16px;text-decoration:none;color:#fff;background:rgba(20,0,38,.7);border:1px solid rgba(200,150,255,.18);transition:.15s}
+.social-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.social-card.discord{background:linear-gradient(160deg, rgba(114,137,218,.25), rgba(114,137,218,.15))}
+.social-card.twitch{background:linear-gradient(160deg, rgba(145,70,255,.25), rgba(145,70,255,.15))}
+.social-card.github{background:linear-gradient(160deg, rgba(255,255,255,.15), rgba(255,255,255,.06))}
+.social-card.instagram{background:linear-gradient(160deg, rgba(225,48,108,.25), rgba(131,58,180,.15))}
+.social-card.mail{background:linear-gradient(160deg, rgba(255,255,255,.12), rgba(255,255,255,.06))}
+.footer{height:80px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(75,0,130,.80) 0%, rgba(45,0,75,.95) 100%);box-shadow:0 -1px 8px rgba(0,0,0,.2)}
+#intro{position:fixed;inset:0;background:radial-gradient(1000px 340px at 70% 20%, rgba(179,127,255,.22), transparent 70%), linear-gradient(180deg,#0f0320,#060012);z-index:9999;display:grid;place-items:center}
+.intro-inner{display:flex;flex-direction:column;align-items:center;gap:16px;transform:translateY(-10px);text-align:center}
+.intro-logo{width:84px;filter:drop-shadow(0 8px 28px rgba(180,123,255,.35))}
+#enterBtn{margin-top:8px}
+#intro.hide{animation:fadeOut .55s ease forwards}
+@keyframes fadeOut{to{opacity:0;visibility:hidden}}
+@media (max-width:1020px){.hero{grid-template-columns:1fr;min-height:auto}.fx-stroke,.fx-fill{font-size:56px}.hero-blob{height:200px}.teaser{grid-template-columns:1fr}}
+.thumb{width:100%;border-radius:12px;margin-bottom:10px;border:1px solid rgba(255,255,255,.12)}
