@@ -8,8 +8,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    body { color:#d8d4ea; font-family:'Outfit',sans-serif; background:radial-gradient(circle at top,#0c0a12 0%,#0c0a10 100%); }
+    .section { min-height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:left; padding:60px 20px; }
+    .container { max-width:900px; }
+    h2.glow { text-align:center; margin-bottom:30px; color:#c586fc; text-shadow:0 0 10px #a55eea; }
+    p { line-height:1.8; font-size:17px; }
+    a { color:#c586fc; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
 </head>
 <body>
+
   <nav class="nav">
     <div class="container wrap">
       <div class="brand"><img src="/assets/branding/logo_main.png" alt="logo"><span>VIX SYSTEMS</span></div>
@@ -18,12 +28,34 @@
 
   <section class="section">
     <div class="container">
-      <h2 class="glow fade-in">Informativa Privacy</h2>
-      <p class="fade-in" style="max-width:800px;margin:0 auto;font-size:17px;line-height:1.7;color:#d8d4ea;">
-        Questo sito non utilizza cookie di profilazione né strumenti di tracciamento di terze parti.<br><br>
-        I soli cookie presenti sono di natura tecnica e servono esclusivamente al corretto funzionamento del sito, ad esempio per ricordare le preferenze di navigazione o il consenso ai cookie stessi.<br><br>
-        Nessun dato personale viene raccolto o memorizzato ai fini commerciali.<br><br>
-        Puoi richiedere informazioni o chiarimenti contattando la titolare del sito tramite i canali ufficiali indicati nella sezione Contatti (Discord o Twitch).<br><br>
+      <h2 class="glow fade-in">Informativa sulla Privacy</h2>
+      <p class="fade-in">
+        Ai sensi del Regolamento (UE) 2016/679 (“GDPR”) e della normativa vigente in materia di protezione dei dati personali.<br><br>
+        <strong>Titolare del trattamento</strong><br>
+        Il titolare del trattamento è <strong>Vix Systems</strong>, contattabile attraverso i canali ufficiali indicati nella sezione <em>Contatti</em> (Discord o Twitch).<br><br>
+        <strong>Tipologia di dati raccolti</strong><br>
+        Questo sito non raccoglie dati personali identificativi degli utenti. Gli unici dati trattati sono quelli tecnici necessari al corretto funzionamento del sito web (ad esempio, cookie tecnici o dati di navigazione anonimi).<br><br>
+        <strong>Finalità del trattamento</strong><br>
+        I dati tecnici vengono utilizzati esclusivamente per:<br>
+        – garantire la corretta visualizzazione delle pagine;<br>
+        – memorizzare la preferenza dell’utente riguardo l’accettazione dei cookie.<br><br>
+        <strong>Base giuridica del trattamento</strong><br>
+        Il trattamento è necessario per il legittimo interesse del titolare (art. 6, par. 1, lett. f) GDPR) a garantire il funzionamento del sito e a rispettare gli obblighi informativi previsti dalla legge.<br><br>
+        <strong>Cookie e tecnologie simili</strong><br>
+        Il sito utilizza esclusivamente cookie tecnici e localStorage per memorizzare la scelta dell’utente in merito all’uso dei cookie. Non vengono installati cookie di profilazione o di terze parti.<br>
+        Alcune risorse grafiche e font sono caricate dal servizio <strong>Google Fonts</strong> (Google Ireland Limited). Tale servizio può raccogliere, in forma anonima, l’indirizzo IP necessario per il corretto funzionamento del caricamento dei font.<br><br>
+        <strong>Durata della conservazione dei dati</strong><br>
+        I dati tecnici (come la preferenza sui cookie) sono memorizzati nel browser dell’utente e non sono trasmessi o conservati su server esterni.<br><br>
+        <strong>Diritti dell’utente</strong><br>
+        Gli utenti possono esercitare i diritti previsti dagli artt. 15–22 del GDPR, tra cui:<br>
+        – ottenere conferma dell’esistenza di dati personali che li riguardano;<br>
+        – richiederne la cancellazione, la rettifica o la limitazione del trattamento;<br>
+        – opporsi al trattamento per motivi legittimi.<br><br>
+        Per esercitare i propri diritti, l’utente può contattare il titolare tramite i canali indicati nella sezione <em>Contatti</em>.<br><br>
+        <strong>Sicurezza dei dati</strong><br>
+        Il sito è ospitato su infrastruttura <strong>Netlify</strong>, che garantisce misure tecniche e organizzative idonee a proteggere i dati secondo gli standard internazionali di sicurezza.<br><br>
+        <strong>Aggiornamento della presente informativa</strong><br>
+        La presente informativa può essere aggiornata periodicamente.<br>
         Ultimo aggiornamento: novembre 2025.
       </p>
     </div>
@@ -32,6 +64,20 @@
   <footer class="footer">
     © 2025 Vix Systems — realizzata con passione e precisione neurale · <a href="/privacy.html">Privacy</a>
   </footer>
+
+  <!-- Cursor -->
+  <div id="vixCursor" style="position:fixed;top:0;left:0;width:20px;height:20px;border-radius:50%;background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;pointer-events:none;transform:translate(-50%,-50%);z-index:999999;opacity:1"></div>
+  <script>
+    (function(){
+      const c=document.getElementById('vixCursor');
+      document.body.style.cursor='none';
+      window.addEventListener('mousemove',e=>{c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';});
+      document.querySelectorAll('a,button').forEach(el=>{
+        el.addEventListener('mouseenter',()=>c.style.transform='translate(-50%,-50%) scale(1.6)');
+        el.addEventListener('mouseleave',()=>c.style.transform='translate(-50%,-50%) scale(1)');
+      });
+    })();
+  </script>
 
 </body>
 </html>
