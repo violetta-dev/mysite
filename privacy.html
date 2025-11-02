@@ -9,10 +9,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>
-    body { color:#d8d4ea; font-family:'Outfit',sans-serif; background:radial-gradient(circle at top,#0c0a12 0%,#0c0a10 100%); }
-    .section { min-height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:left; padding:60px 20px; }
-    .container { max-width:900px; }
-    h2.glow { text-align:center; margin-bottom:30px; color:#c586fc; text-shadow:0 0 10px #a55eea; }
+    body {
+      color:#f3edff;
+      font-family:'Outfit',sans-serif;
+      background:url('/assets/branding/background_hero.svg') no-repeat center top fixed, linear-gradient(180deg,#0c0615 0%,#140a22 100%);
+      background-size:cover;
+      overflow-x:hidden;
+    }
+    .overlay {
+      position:fixed;
+      top:0;left:0;width:100%;height:100%;
+      background:rgba(10,5,20,0.7);
+      z-index:-1;
+    }
+    .section {
+      min-height:80vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:left;
+      padding:80px 20px;
+    }
+    .container { max-width:900px; background:rgba(25,15,40,0.6); padding:40px; border-radius:12px; box-shadow:0 0 30px rgba(165,94,234,0.3); }
+    h2.glow { text-align:center; margin-bottom:30px; color:#cbb6ff; text-shadow:0 0 10px #a55eea; }
     p { line-height:1.8; font-size:17px; }
     a { color:#c586fc; text-decoration:none; }
     a:hover { text-decoration:underline; }
@@ -20,9 +40,11 @@
 </head>
 <body>
 
+  <div class="overlay"></div>
+
   <nav class="nav">
     <div class="container wrap">
-      <div class="brand"><img src="/assets/branding/logo_main.png" alt="logo"><span>VIX SYSTEMS</span></div>
+      <a href="/index.html" class="brand"><img src="/assets/branding/logo_main.png" alt="logo"><span>VIX SYSTEMS</span></a>
     </div>
   </nav>
 
