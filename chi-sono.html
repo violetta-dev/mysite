@@ -1,63 +1,92 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VIX // Chi Sono</title>
-  <base href="./">
+<html lang="it"><head>
+  <base href=\"./\">
+<title>VIX // Chi sono</title>  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="VIX // Neural Core" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body data-page="chi-sono">
-  <!-- Background video -->
+<body data-page="bio" class="fade-in">
   <video class="bg-video" autoplay muted loop playsinline poster="assets/logo_vix.png">
-    <source src="assets/bg.mp4" type="video/mp4">
+    <source src="assets/bg.mp4" type="video/mp4" />
   </video>
   <div class="grid-overlay"></div>
   <div class="beam"></div>
   <canvas id="particles"></canvas>
-
-  <!-- Sidebar vertical -->
-  <aside class="console">
-    <div class="console-header">
-      <img src="assets/logo_vix.png" alt="VIX logo" class="logo">
-      <div class="brand">VIX // Neural Core</div>
+  <aside class="console compact">
+    <div class="console-header row">
+      <img src="assets/logo_vix.png" class="logo" alt="Vix logo">
+      <div class="title">VIX // Neural Core</div>
     </div>
     <div class="console-status">
-      <span class="dot online"></span>
-      <span id="sys-label">ONLINE</span>
-      <span id="sys-time">--:--:--</span>
+      <span class="led led-online"></span> ONLINE
+      <span class="sys-time" id="sys-time">--:--:--</span>
     </div>
-
-    <label class="switch-row">
-      <input type="checkbox" id="overclock">
-      <span class="slider"></span>
-      <span class="lbl">Overclock</span>
-    </label>
-
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="chi-sono.html" class="nav-link">Chi Sono</a>
-      <a href="progetti.html" class="nav-link">Progetti</a>
-      <a href="competenze.html" class="nav-link">Competenze</a>
-      <a href="contatti.html" class="nav-link">Contatti</a>
+    <div class="console-toggle">
+      <label class="switch">
+        <input type="checkbox" id="overclock">
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-label">Overclock</span>
+    </div>
+    <nav class="console-nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="chi-sono.html">Chi sono</a>
+      <a class="nav-link" href="progetti.html">Progetti</a>
+      <a class="nav-link" href="competenze.html">Competenze</a>
+      <a class="nav-link" href="contatti.html">Contatti</a>
     </nav>
   </aside>
 
-  <main class="page">
-    <h1>Chi sono</h1>
-    <p class="lead">Mind architect: dove la forma guida il comportamento e la logica diventa empatia.</p>
-    <p>Creo sistemi, interfacce e infrastrutture che sono funzionali, coerenti con le persone e con l’ambiente in cui vivono. 
-    L’estetica per me è un linguaggio comportamentale, la logica una forma di empatia strutturata.</p>
-  </main>
+<main class="page">
+<section class="panel">
+  <h2 class="section-title">Chi sono</h2>
+  <p class="lead typing" id="intro-type">Mind architect: dove la forma guida il comportamento e la logica diventa empatia.</p>
+  <pre class="bio mono">Sono nata come progettista grafica, quando il computer era ancora una tela ruvida e il colore si stendeva pixel per pixel.
+Ho iniziato con Paint, poi GIMP, e infine Photoshop, che per me fu una rivelazione: la prima volta che ho capito che un’idea poteva diventare struttura.
+Non c’erano tutorial, solo tentativi, errori, notti a capire perché un’ombra sembrasse sbagliata o perché un colore “non respirasse” come doveva.
 
-  <footer class="footer">
-    <p>© VIX — Neural Core</p>
-  </footer>
+La suite Adobe è arrivata come una grammatica completa — Illustrator, Premiere, After Effects — e con lei ho imparato che il design non è solo estetica, ma architettura di percezione.
+Ho iniziato a osservare come ogni interfaccia, ogni forma, ogni contrasto visivo potesse guidare un comportamento.
+È lì che ho capito che il mio lavoro non era disegnare, ma costruire logiche visive.
 
+Poi è arrivato il codice.
+Il mio primo linguaggio fu Python, e da lì ho iniziato a “parlare con le macchine”.
+Non fu semplice: la logica mi affascinava ma sembrava rigida, quasi fredda rispetto al mondo del design.
+Eppure, riga dopo riga, ho scoperto che anche il codice è una forma di arte — solo più silenziosa, più metodica.
+I miei primi bot nacquero da curiosità e necessità: automatizzare, semplificare, ordinare.
+Ogni errore di sintassi era una lezione, ogni bug un modo per capire come ragionavo io, non solo la macchina.
+
+Dopo Python, arrivò Java.
+Più severo, più strutturato.
+Mi ha insegnato la disciplina e il rispetto per l’ordine.
+E fu proprio con Discord che le mie due anime — quella del design e quella della logica — si unirono per la prima volta.
+Creare sistemi per comunità significava costruire spazi dove la forma serviva la funzione e la funzione serviva la relazione.
+Ogni embed, ogni comando, ogni colore scelto aveva un significato comportamentale.
+
+L’HTML è stato il mio ponte verso il mondo visibile del codice.
+Mi ha fatto capire che un’interfaccia è un organismo, e ogni tag è un battito.
+Non più solo grafica, non più solo codice: era sistema.
+E io, finalmente, avevo trovato il mio linguaggio.
+
+Negli anni ho sbagliato tanto: design troppo carichi, logiche troppo complesse, interfacce che solo io riuscivo a capire.
+Ma ogni errore ha scolpito il mio modo di pensare.
+Ho imparato a semplificare senza perdere profondità, a disegnare come si progetta un algoritmo, e a programmare come si costruisce un’idea visiva.
+
+Oggi il mio lavoro è un equilibrio tra razionalità e sensibilità tecnica.
+Creo sistemi, interfacce e infrastrutture che non siano solo funzionali, ma anche coerenti con le persone che le vivono.
+L’estetica è diventata un linguaggio comportamentale, la logica una forma di empatia strutturata.
+
+In fondo, non ho mai smesso di disegnare — ho solo cambiato i pennelli.
+</pre>
+</section>
+</main>
+  <footer class="footer"><div class="container"><p>© VIX — Neural Core</p></div></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
-</body>
-</html>
+
+</body></html>

@@ -1,4 +1,4 @@
-# Clean routes for static pages
+# Redirects for clean URLs
 [[redirects]]
   from = "/chi-sono"
   to = "/chi-sono.html"
