@@ -68,21 +68,8 @@
   </footer>
 
   <!-- Vix cursor (inline, guaranteed) -->
-  <!-- old cursor removed --><div id="vixCursor" style="display:none" style="display:block!important;opacity:1!important;z-index:999999!important;" style="position:fixed;top:0;left:0;width:20px;height:20px;border-radius:50%;background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;pointer-events:none;transform:translate(-50%,-50%);z-index:999999;opacity:1"></div>
-  <script>
-    (function(){
-      const c=document.getElementById('vixCursor');
-      if(!c) return;
-      try{ document.body.style.cursor='none'; }catch(e){}
-      window.addEventListener('mousemove',e=>{ c.style.left=e.clientX+'px'; c.style.top=e.clientY+'px'; });
-      const hook=(el)=>{ el.addEventListener('mouseenter',()=>c.style.transform='translate(-50%,-50%) scale(1.6)');
-                          el.addEventListener('mouseleave',()=>c.style.transform='translate(-50%,-50%) scale(1)'); };
-      document.querySelectorAll('a,button,.btn,.card.click').forEach(hook);
-      const mo=new MutationObserver(()=>document.querySelectorAll('a,button,.btn,.card.click').forEach(hook));
-      mo.observe(document.body,{childList:true,subtree:true});
-    })();
-  window.addEventListener('load',()=>{const c=document.getElementById('vixCursor');if(c)c.style.display='block';});
-</script>
+  <!-- old cursor removed -->
+  
 
 
 <!-- Cookie Banner -->
@@ -92,41 +79,57 @@
     <button id="cookieAccept" style="background:#a55eea;border:none;padding:10px 20px;color:white;font-weight:600;border-radius:8px;cursor:pointer;box-shadow:0 0 10px rgba(165,94,234,0.6);transition:all .3s;">Accetto</button>
   </div>
 </div>
-<script>
-(function(){
-  const banner=document.getElementById('cookieBanner');
-  const btn=document.getElementById('cookieAccept');
-  if(!localStorage.getItem('vix_cookie_ok')){
-    setTimeout(()=>banner.style.bottom='20px',500);
-  }
-  btn.addEventListener('click',()=>{
-    localStorage.setItem('vix_cookie_ok','true');
-    banner.style.bottom='-200px';
-  });
-})();
-window.addEventListener('load',()=>{const c=document.getElementById('vixCursor');if(c)c.style.display='block';});
-</script>
+
 
 
 <!-- Universal Vix Cursor -->
-<div id="vixCursor" style="position:fixed;top:50%;left:50%;width:20px;height:20px;border-radius:50%;
-background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;
-pointer-events:none;transform:translate(-50%,-50%);
-display:block!important;opacity:1!important;z-index:999999!important;"></div>
+
+
+
+
 <script>
-(function(){
-  const c=document.getElementById('vixCursor');
-  if(!c)return;
-  let visible=false;
-  function move(e){c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';visible=true;}
-  window.addEventListener('mousemove',move);
-  document.body.style.cursor='none';
-  document.querySelectorAll('a,button,.btn,.card.click').forEach(el=>{
-    el.addEventListener('mouseenter',()=>c.style.transform='translate(-50%,-50%) scale(1.6)');
-    el.addEventListener('mouseleave',()=>c.style.transform='translate(-50%,-50%) scale(1)');
-  });
-  setTimeout(()=>{if(!visible){c.style.left='50%';c.style.top='50%';c.style.opacity='1';}},200);
-})();
+document.addEventListener('DOMContentLoaded', function () {
+  try {
+    // create cursor
+    var c = document.createElement('div');
+    c.id = 'vixCursor';
+    c.style.position='fixed';
+    c.style.top='0';
+    c.style.left='0';
+    c.style.width='20px';
+    c.style.height='20px';
+    c.style.borderRadius='50%';
+    c.style.background='#c586fc';
+    c.style.boxShadow='0 0 15px #c586fc, 0 0 30px #a55eea';
+    c.style.pointerEvents='none';
+    c.style.transform='translate(-50%,-50%)';
+    c.style.zIndex='999999';
+    c.style.opacity='1';
+    c.style.transition='transform .1s ease';
+    document.body.appendChild(c);
+    // hide default cursor
+    document.body.style.cursor='none';
+
+    // follow mouse
+    window.addEventListener('mousemove', function(e){
+      c.style.left = e.clientX + 'px';
+      c.style.top  = e.clientY + 'px';
+    });
+
+    // hover scale
+    function hook(el){
+      el.addEventListener('mouseenter', function(){ c.style.transform='translate(-50%,-50%) scale(1.6)'; });
+      el.addEventListener('mouseleave', function(){ c.style.transform='translate(-50%,-50%) scale(1)'; });
+    }
+    document.querySelectorAll('a,button,.btn,.card.click').forEach(hook);
+
+    // observe new nodes
+    var mo = new MutationObserver(function(){ document.querySelectorAll('a,button,.btn,.card.click').forEach(hook); });
+    mo.observe(document.body, {childList:true, subtree:true});
+  } catch(e) {
+    console.error('Cursor init error:', e);
+  }
+});
 </script>
 
 </body>
