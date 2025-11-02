@@ -77,7 +77,7 @@ Ultimo aggiornamento: novembre 2025.
   </footer>
 
   <!-- Vix cursor inline -->
-  <div id="vixCursor" style="display:block!important;opacity:1!important;z-index:999999!important;" style="position:fixed;top:0;left:0;width:20px;height:20px;border-radius:50%;background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;pointer-events:none;transform:translate(-50%,-50%);z-index:999999;opacity:1"></div>
+  <!-- old cursor removed --><div id="vixCursor" style="display:none" style="display:block!important;opacity:1!important;z-index:999999!important;" style="position:fixed;top:0;left:0;width:20px;height:20px;border-radius:50%;background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;pointer-events:none;transform:translate(-50%,-50%);z-index:999999;opacity:1"></div>
   <script>
     (function(){{
       const c=document.getElementById('vixCursor');document.body.style.cursor='none';
@@ -104,6 +104,28 @@ Ultimo aggiornamento: novembre 2025.
       btn.addEventListener('click',function(){{localStorage.setItem('vix_cookie_ok','true');b.style.bottom='-200px';}});
     }})();
   window.addEventListener('load',()=>{const c=document.getElementById('vixCursor');if(c)c.style.display='block';});
+</script>
+
+
+<!-- Universal Vix Cursor -->
+<div id="vixCursor" style="position:fixed;top:50%;left:50%;width:20px;height:20px;border-radius:50%;
+background:#c586fc;box-shadow:0 0 15px #c586fc,0 0 30px #a55eea;
+pointer-events:none;transform:translate(-50%,-50%);
+display:block!important;opacity:1!important;z-index:999999!important;"></div>
+<script>
+(function(){
+  const c=document.getElementById('vixCursor');
+  if(!c)return;
+  let visible=false;
+  function move(e){c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';visible=true;}
+  window.addEventListener('mousemove',move);
+  document.body.style.cursor='none';
+  document.querySelectorAll('a,button,.btn,.card.click').forEach(el=>{
+    el.addEventListener('mouseenter',()=>c.style.transform='translate(-50%,-50%) scale(1.6)');
+    el.addEventListener('mouseleave',()=>c.style.transform='translate(-50%,-50%) scale(1)');
+  });
+  setTimeout(()=>{if(!visible){c.style.left='50%';c.style.top='50%';c.style.opacity='1';}},200);
+})();
 </script>
 
 </body>
