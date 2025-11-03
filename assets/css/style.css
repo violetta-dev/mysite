@@ -91,3 +91,16 @@ body { cursor: none !important; }
 .cursor.cursor--hidden { opacity: 1 !important; }
 
 a, button, .btn, .card.click { cursor: none !important; }
+
+
+/* === Parallax Background & Custom Cursor Adjustments === */
+html, body {
+  background: url('../branding/background_hero.svg') no-repeat center center fixed;
+  background-size: cover;
+  transition: background-position 0.15s ease-out;
+  cursor: url('../branding/logo_main.png') 12 12, auto;
+}
+
+* {
+  cursor: url('../branding/logo_main.png') 12 12, auto;
+}
