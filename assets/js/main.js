@@ -23,3 +23,11 @@ document.addEventListener('mousemove', function(e) {
   const moveY = (e.clientY / window.innerHeight - 0.5) * 10; // movimento verticale lieve
   document.body.style.backgroundPosition = `${50 - moveX}% ${50 - moveY}%`;
 });
+
+
+// === Global Parallax Background Effect (intensified) ===
+document.addEventListener('mousemove', function(e) {
+  const moveX = (e.clientX / window.innerWidth - 0.5) * 20; // intensità aumentata
+  const moveY = (e.clientY / window.innerHeight - 0.5) * 20;
+  document.body.style.backgroundPosition = `${50 - moveX}% ${50 - moveY}%`;
+});

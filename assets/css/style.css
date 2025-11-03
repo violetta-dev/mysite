@@ -104,3 +104,25 @@ html, body {
 * {
   cursor: url('../branding/logo_main.png') 12 12, auto;
 }
+
+
+/* === Global Parallax & Cursor Refinement === */
+html, body {
+  background: url('../branding/background_hero.svg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-position 0.15s ease-out;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Rimuove eventuali stacchi visivi e colori di sezione */
+section, header, footer {
+  background: transparent !important;
+}
+
+/* Cursore personalizzato statico (ridotto al 40%) */
+html, body, * {
+  cursor: url('../branding/logo_main.png') 8 8, none !important;
+}
